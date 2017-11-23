@@ -69,7 +69,7 @@
         {{ if .Site.Params.instagram }}
             <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener"><img class="icon" src="/img/instagram.svg" alt="instagram" /></a>
         {{ end }}
-            
+
         {{ if .Site.Params.px500 }}
             <a href="{{ .Site.Params.px500 }}" target="_blank" rel="noopener"><img class="icon" src="/img/500px.svg" alt="500px" /></a>
         {{ end }}
@@ -82,8 +82,8 @@
             <a href="mailto:{{ .Site.Params.email }}"><img class="icon" src="/img/email.svg" alt="email" /></a>
         {{ end }}
 
-        {{ if .Site.RSSLink }}
-            <a href="{{ .Site.RSSLink }}"><img class="icon" src="/img/rss.svg" alt="rss" /></a>
+        {{ if .Site.Params.stackoverflow }}
+            <a href="{{ .Site.Params.stackoverflow }}" target="_blank" rel="noopener"><img class="icon" src="/img/so.svg" alt="stackoverflow" /></a>
         {{ end }}
         {{ if and .Site.Params.i18n_flags .IsTranslated }}
             {{ range .Translations }}
