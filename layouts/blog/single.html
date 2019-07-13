@@ -17,6 +17,16 @@
                     {{ if not .Site.Params.noshowreadtime }}
 		    <div class="reading-time"><div class="middot"></div>{{ i18n "readingTime" .ReadingTime }}</div>
                     {{ end }}
+
+                    <div class="tags">
+                      {{ $taxo := "tags" }} <!-- Use the plural form here -->
+                      {{ range .Param $taxo }}
+                          {{ $name := . }}
+                          {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                              <a href="{{ .Permalink }}">#{{ $name }}</a>
+                          {{ end }}
+                      {{ end }}
+                    </div>
                 </div>
             </div>
             <div class="markdown">
